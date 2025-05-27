@@ -1,6 +1,7 @@
 from djongo import models
 
 class User(models.Model):
+    id = models.CharField(max_length=36, primary_key=True, default="")  # UUIDなどを使用する場合に適応
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=100)
 
